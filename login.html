@@ -1,1 +1,265 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Welcome Back | A Museum of Almosts</title><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet"><link rel="stylesheet" href="login.css"></head><body><div class="grain"></div><header><div class="logo">❀ <span>A MUSEUM<br>OF ALMOSTS</span></div><span class="head-right">PRIVATE READING ROOM · EST. 2026</span></header><main class="stage"><div class="backdrop"><div class="paper note n1">some stories<br>are not meant<br>to be finished,<br>only remembered. ♡</div><div class="polaroid p1"><img src="photo-03.jpg" alt="Story photograph"><span>maybe in another life...</span></div><div class="polaroid p2"><img src="photo-01.jpg" alt="Rainy story scene"><span>the things we never said</span></div><div class="paper note n2">for the what ifs,<br>the almosts,<br>and the ones<br>we never got<br>to keep.</div><div class="flower">✿</div><div class="rose">❦</div><div class="stamp">✧<br>AM</div></div><section class="content"><div class="hero-title"><div>A MUSEUM OF</div><strong>Almosts</strong><p>SOME STORIES STAY WITH US,<br>EVEN IF THEY NEVER HAPPENED.</p></div><div class="form-paper"><span class="butterfly">❧</span><h1 id="formTitle">Welcome Back</h1><div class="ornament">──── ♡ ────</div><p class="subtitle" id="subtitle">Log in to continue your journey.</p><div class="tabs"><button class="active" type="button" id="loginTab">Log In</button><button type="button" id="signupTab">Sign Up</button></div><form id="loginForm"><label for="nickname">YOUR READER NAME</label><div class="input-row"><span>♙</span><input id="nickname" name="nickname" type="text" placeholder="Username or nickname" minlength="2" maxlength="32" autocomplete="nickname" required></div><p class="helper">Demo access — no password needed.</p><button class="submit" id="submitButton" type="submit">Log In &nbsp; →</button><p class="error" id="error" aria-live="polite"></p></form><div class="foot">For the stories we couldn't keep. ♡</div></div></section></main><footer>A MUSEUM OF ALMOSTS ♡ &nbsp; READ · FEEL · REMEMBER <span>Made for the ones who feel too much.</span></footer><script src="login.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Welcome | A Museum of Almosts</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+  <div class="grain"></div>
+
+  <header>
+    <div class="logo">
+      ❀
+      <span>A MUSEUM<br>OF ALMOSTS</span>
+    </div>
+
+    <span class="head-right">
+      A LITTLE WORLD OF UNFINISHED STORIES
+    </span>
+  </header>
+
+  <main class="stage">
+
+    <!-- SCRAPBOOK DECORATIONS -->
+    <div class="backdrop">
+
+      <div class="paper note n1">
+        some stories<br>
+        are not meant<br>
+        to be finished,<br>
+        only remembered. ♡
+      </div>
+
+      <div class="polaroid p1">
+        <img src="photo-03.jpg" alt="A nostalgic photograph">
+        <span>maybe in another life...</span>
+      </div>
+
+      <div class="polaroid p2">
+        <img src="photo-01.jpg" alt="A rainy memory">
+        <span>the things we never said</span>
+      </div>
+
+      <div class="paper note n2">
+        for the what ifs,<br>
+        the almosts,<br>
+        and the ones<br>
+        we never got<br>
+        to keep.
+      </div>
+
+      <div class="flower">✿</div>
+      <div class="rose">❦</div>
+      <div class="stamp">✧<br>AM</div>
+
+    </div>
+
+    <section class="content">
+
+      <div class="hero-title">
+        <div>A MUSEUM OF</div>
+        <strong>Almosts</strong>
+
+        <p>
+          SOME STORIES STAY WITH US,<br>
+          EVEN IF THEY NEVER HAPPENED.
+        </p>
+      </div>
+
+      <!-- SCRAPBOOK LOGIN CARD -->
+      <div class="form-paper">
+
+        <span class="butterfly">❧</span>
+
+        <p class="paper-label">
+          YOUR LITTLE CORNER OF THE INTERNET
+        </p>
+
+        <h1 id="formTitle">Welcome Back</h1>
+
+        <div class="ornament">──── ♡ ────</div>
+
+        <p class="subtitle" id="subtitle">
+          Your next chapter is waiting.
+        </p>
+
+        <!-- LOGIN / SIGN UP TABS -->
+        <div class="tabs" role="tablist" aria-label="Account options">
+
+          <button
+            type="button"
+            class="active"
+            id="loginTab"
+            role="tab"
+            aria-selected="true"
+          >
+            Log In
+          </button>
+
+          <button
+            type="button"
+            id="signupTab"
+            role="tab"
+            aria-selected="false"
+          >
+            Sign Up
+          </button>
+
+        </div>
+
+        <!-- ACCOUNT FORM -->
+        <form id="loginForm">
+
+          <!-- READER NAME: SIGN UP ONLY -->
+          <div class="form-group" id="nameGroup" hidden>
+
+            <label for="readerName">YOUR READER NAME</label>
+
+            <div class="input-row">
+              <span>♡</span>
+
+              <input
+                type="text"
+                id="readerName"
+                placeholder="What should we call you?"
+                autocomplete="nickname"
+                minlength="2"
+                maxlength="32"
+              >
+            </div>
+
+          </div>
+
+          <!-- EMAIL -->
+          <div class="form-group">
+
+            <label for="email">EMAIL ADDRESS</label>
+
+            <div class="input-row">
+              <span>✉</span>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email address"
+                autocomplete="email"
+                required
+              >
+            </div>
+
+          </div>
+
+          <!-- PASSWORD -->
+          <div class="form-group">
+
+            <label for="password">PASSWORD</label>
+
+            <div class="input-row">
+              <span>♧</span>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                minlength="8"
+                required
+              >
+
+              <button
+                type="button"
+                class="show-password"
+                data-toggle-password="password"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+
+          </div>
+
+          <!-- CONFIRM PASSWORD: SIGN UP ONLY -->
+          <div class="form-group" id="confirmGroup" hidden>
+
+            <label for="confirmPassword">CONFIRM PASSWORD</label>
+
+            <div class="input-row">
+              <span>♡</span>
+
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Enter your password again"
+                autocomplete="new-password"
+                minlength="8"
+              >
+
+              <button
+                type="button"
+                class="show-password"
+                data-toggle-password="confirmPassword"
+                aria-label="Show password"
+              >
+                Show
+              </button>
+            </div>
+
+          </div>
+
+          <!-- VALIDATION MESSAGE -->
+          <p
+            class="form-message"
+            id="formMessage"
+            aria-live="polite"
+          ></p>
+
+          <!-- SUBMIT BUTTON -->
+          <button
+            type="submit"
+            class="submit"
+            id="submitButton"
+          >
+            Log In →
+          </button>
+
+          <!-- SWITCH BETWEEN FORMS -->
+          <p class="switch-text" id="switchText">
+            New to our little corner?
+            <button type="button" id="switchMode">
+              Create an account
+            </button>
+          </p>
+
+        </form>
+
+        <div class="foot">
+          For the stories we couldn't keep. ♡
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    A MUSEUM OF ALMOSTS ♡
+    &nbsp; READ · FEEL · REMEMBER
+
+    <span>
+      Made for the ones who feel too much.
+    </span>
+  </footer>
+
+  <script src="login.js"></script>
+
+</body>
+</html>
